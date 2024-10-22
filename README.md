@@ -29,7 +29,8 @@ We are considering following four tables within the [data](https://github.com/nk
 **Data Factory:** 
 ```
 Data integration service that enables you to create, schedule, and manage data pipelines for efficient data movement and transformation between various sources and destinations in Azure and beyond. It simplifies ETL (Extract, Transform, Load) and data integration tasks.
-```
+
+
 
 **Data Lake Gen 2:** 
 ```
@@ -44,6 +45,12 @@ Databricks is a unified analytics platform built on top of Apache Spark, designe
 ```
 SQL Data Warehouse, is a cloud-based analytics service provided by Microsoft Azure. It combines big data and data warehousing into a single integrated platform, allowing organizations to analyze and process large volumes of data for business intelligence and data analytics purposes.
 ```
+```
+![scopes](https://github.com/user-attachments/assets/c9b0b7c8-6d94-4f1c-87e9-dcda8a96192a)
+
+![configure-databricks-cli](https://github.com/user-attachments/assets/fbae4641-71a9-4306-8c08-86562670478c)
+![paris-olympic-scopes](https://github.com/user-attachments/assets/49c81b67-f9ce-4b67-b438-71fea65ebb2e)
+![synapse-sql](https://github.com/user-attachments/assets/4c878f9e-9779-4c0b-b991-7a6bd4959c5c)
 
 ## Setting the workspace:
 We will use Databricks Community Edition which is free of cost to perform the Spark operations if you prefer to use spark locally or in the Hadoop cluster it’s fine.
