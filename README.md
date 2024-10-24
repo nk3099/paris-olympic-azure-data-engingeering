@@ -3,11 +3,11 @@
 
 # Table of Contents
 - [Overview of the Design](#overview-of-the-design)
-- [Dataset](Dataset)
-- [Tech Stack](Tech-Stack)
-- [Setting the workspace](setting-the-workspace)
-- [Azure Services](Azure-Services)
-- [Databricks-backed secret scope](Databricks-backed-secret-scope)
+- [Dataset](#Dataset)
+- [Tech Stack](#Tech-Stack)
+- [Setting the workspace](#setting-the-workspace)
+- [Azure Services](#Azure-Services)
+- [Databricks-backed secret scope](#Databricks-backed-secret-scope)
 
 
 # <a name="overview-of-the-design"></a> Overview of the Design
@@ -28,11 +28,11 @@ We are considering following four tables within the [data](https://github.com/nk
 - Azure
 - Databricks
 
-# Setting the workspace
+# <a name="setting-the-workspace"></a> Setting the workspace
 ![setting_workspace](https://github.com/user-attachments/assets/2941ea54-9abe-4157-9021-6e76d4d2ed88)
 
 
-# Azure Services:
+# <a name="azure-services"></a> Azure Services:
 **Data Factory:** 
 ```
 Data integration service that enables you to create, schedule, and manage data pipelines for efficient data movement and transformation between various sources and destinations in Azure and beyond. It simplifies ETL (Extract, Transform, Load) and data integration tasks.
@@ -76,7 +76,7 @@ SQL Data Warehouse, is a cloud-based analytics service provided by Microsoft Azu
 
 
 
-# Databricks-backed secret scope
+# <a name="databricks-backed-secret-scope"></a> Databricks-backed secret scope
 A Databricks-backed secret scope is stored in (backed by) an encrypted database owned and managed by Azure Databricks.
 
 ![paris-olympic-scopes](https://github.com/user-attachments/assets/aac172ae-657e-4d6b-b97b-8bf102417ddb) 
