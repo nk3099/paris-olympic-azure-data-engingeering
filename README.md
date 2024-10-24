@@ -2,18 +2,18 @@
 > This project is to analyze Olympic data using various tools and technologies, including Azure Data Factory, Data Lake Gen 2, Synapse Analytics, and Azure Databricks.
 
 # Table of Contents
-- [Overview of the Design](overview-of-the-design)
-- [Problem Statement](problem-statement)
+- [Overview of the Design](#overview-of-the-design)
 - [Dataset](Dataset)
 - [Tech Stack](Tech-Stack)
 - [Setting the workspace](setting-the-workspace)
 - [Azure Services](Azure-Services)
 - [Databricks-backed secret scope](Databricks-backed-secret-scope)
 
-# Overview of the Design
+
+# <a name="overview-of-the-design"></a> Overview of the Design
 ![Architecture_Design](https://github.com/user-attachments/assets/515b8754-98a5-4046-bd1b-9a98cc15c4df)
 
-# Dataset
+# <a name="Dataset"></a>Dataset
 For this project, we are going to use the kaggle dataset : [Paris 2024 Olympic Summer Games Dataset](https://www.kaggle.com/datasets/piterfm/paris-2024-olympic-summer-games). 
 
 We are considering following four tables within the [data](https://github.com/nk3099/paris-olympic-azure-data-engingeering/tree/main/data) folder:
@@ -22,7 +22,7 @@ We are considering following four tables within the [data](https://github.com/nk
 - [medals.csv](https://github.com/nk3099/paris-olympic-azure-data-engingeering/blob/main/data/medals.csv)
 - [teams.csv](https://github.com/nk3099/paris-olympic-azure-data-engingeering/blob/main/data/teams.csv)
 
-# Tech Stack
+# <a name="Tech-Stack"></a>Tech Stack
 - PySpark
 - SQL
 - Azure
@@ -77,8 +77,12 @@ SQL Data Warehouse, is a cloud-based analytics service provided by Microsoft Azu
 
 
 # Databricks-backed secret scope
-A Databricks-backed secret scope is stored in (backed by) an encrypted database owned and managed by Azure Databricks.\
-![paris-olympic-scopes](https://github.com/user-attachments/assets/aac172ae-657e-4d6b-b97b-8bf102417ddb)
+A Databricks-backed secret scope is stored in (backed by) an encrypted database owned and managed by Azure Databricks.
+
+![paris-olympic-scopes](https://github.com/user-attachments/assets/aac172ae-657e-4d6b-b97b-8bf102417ddb) 
+
+![databricks-scope](https://github.com/user-attachments/assets/339d0767-54b9-4b0f-a2fb-da3e87aec26e)
+
 
 ## Steps:
 
