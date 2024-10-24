@@ -6,7 +6,9 @@
 - [Problem Statement](problem-statement)
 - [Dataset](Dataset)
 - [Tech Stack](Tech-Stack)
+- [Setting the workspace](setting-the-workspace)
 - [Azure Services](Azure-Services)
+- [Databricks-backed secret scope](Databricks-backed-secret-scope)
 
 # Overview of the Design
 ![Architecture_Design](https://github.com/user-attachments/assets/515b8754-98a5-4046-bd1b-9a98cc15c4df)
@@ -26,11 +28,16 @@ We are considering following four tables within the [data](https://github.com/nk
 - Azure
 - Databricks
 
+# Setting the workspace
+![setting_workspace](https://github.com/user-attachments/assets/2941ea54-9abe-4157-9021-6e76d4d2ed88)
+
+
 # Azure Services:
 **Data Factory:** 
 ```
 Data integration service that enables you to create, schedule, and manage data pipelines for efficient data movement and transformation between various sources and destinations in Azure and beyond. It simplifies ETL (Extract, Transform, Load) and data integration tasks.
 ```
+![adf](https://github.com/user-attachments/assets/a8753d91-21ff-446a-ae46-cbd2c5b2ffdf)
 
 
 
@@ -38,6 +45,22 @@ Data integration service that enables you to create, schedule, and manage data p
 ```
 Data lake solution that combines the capabilities of a data lake with the power of Azure Blob Storage, allowing you to store and analyze large volumes of structured and unstructured data with enhanced performance, security, and analytics capabilities.
 ```
+parisolympic (ADLS gen2) : Containers > paris-olympic-data >
+```
+1.raw-data
+ - athletes.csv
+ - coaches.csv
+ - medals.csv
+ - teams.csv
+   
+2.transformed-data
+ - athletes > (Parquet file)
+ - coaches > (Parquet file)
+ - medals > part-00000-tid-2301537820015857710-f4df93dd-dc2f-4969-a478-2255936842a0-40-1-c000.csv (Parquet file)
+ - teams > (Parquet file)
+```
+   
+![adls](https://github.com/user-attachments/assets/71a6ecdd-c215-44c7-b5d5-fa7b7a6e0933)
 
 **Azure Databricks:**
 ```
@@ -49,8 +72,8 @@ Databricks is a unified analytics platform built on top of Apache Spark, designe
 SQL Data Warehouse, is a cloud-based analytics service provided by Microsoft Azure. It combines big data and data warehousing into a single integrated platform, allowing organizations to analyze and process large volumes of data for business intelligence and data analytics purposes.
 ```
 
-# Setting the workspace:
-![setting_workspace](https://github.com/user-attachments/assets/2941ea54-9abe-4157-9021-6e76d4d2ed88)
+![synapse-sql](https://github.com/user-attachments/assets/03b180c1-7f48-4784-a722-3898ed98946d)
+
 
 
 # Databricks-backed secret scope
@@ -67,7 +90,8 @@ A Databricks-backed secret scope is stored in (backed by) an encrypted database 
 4.Go to C:\Users\.databrickscg (databricks configuration file) and make sure host_url and token is pasted correctly.
 ```
 
-![configure-databricks-cli](https://github.com/user-attachments/assets/fbae4641-71a9-4306-8c08-86562670478c)
+![configure-databricks-cli](https://github.com/user-attachments/assets/cbacaebb-6e2b-4f19-8365-79c98289193a)
+
 
 2.Creating databricks-backed secret scope commands:
 ```
@@ -77,10 +101,5 @@ A Databricks-backed secret scope is stored in (backed by) an encrypted database 
 4.databricks secrets delete-scope --scope <scope-name>
 ```
 ![scopes](https://github.com/user-attachments/assets/03580fcb-e38c-4fe4-8ef0-861595a1f8da)
-
-
-
-
-![synapse-sql](https://github.com/user-attachments/assets/4c878f9e-9779-4c0b-b991-7a6bd4959c5c)
 
 
