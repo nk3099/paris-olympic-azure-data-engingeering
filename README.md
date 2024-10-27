@@ -54,10 +54,10 @@ parisolympic (ADLS gen2) : Containers > paris-olympic-data >
  - teams.csv
    
 2.transformed-data
- - athletes > (Parquet file)
- - coaches > (Parquet file)
- - medals > part-00000-tid-2301537820015857710-f4df93dd-dc2f-4969-a478-2255936842a0-40-1-c000.csv (Parquet file)
- - teams > (Parquet file)
+ - athletes > (Patitioned csv file)
+ - coaches > (Patitioned csv file)
+ - medals > part-00000-tid-2301537820015857710-f4df93dd-dc2f-4969-a478-2255936842a0-40-1-c000.csv (Patitioned csv file)
+ - teams > (Patitioned csv file)
 ```
    
 ![adls](https://github.com/user-attachments/assets/71a6ecdd-c215-44c7-b5d5-fa7b7a6e0933)
